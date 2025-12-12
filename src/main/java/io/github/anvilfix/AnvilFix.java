@@ -29,12 +29,9 @@ public class AnvilFix extends JavaPlugin implements Listener {
     
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onInventoryClick(InventoryClickEvent event) {
-        // Only check anvil result slot clicks (slot 2)
         if (event.getRawSlot() == 2 && event.getInventory().getType() == InventoryType.ANVIL) {
-            // If Slimefun blocked it (Result.DENY), allow it
             if (event.getResult() == org.bukkit.event.Event.Result.DENY) {
                 event.setResult(org.bukkit.event.Event.Result.ALLOW);
-                getLogger().fine("Bypassed Slimefun anvil restriction");
             }
         }
     }
