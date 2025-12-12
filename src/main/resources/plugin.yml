@@ -1,0 +1,7 @@
+name: AnvilFix
+main: io.github.anvilfix.AnvilFix
+version: 1.0
+api-version: "1.21"
+depend: [Slimefun]
+author: Zenovil
+description: Allows Slimefun items to be used in vanilla anvils
